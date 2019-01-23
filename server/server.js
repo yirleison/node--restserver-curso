@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 let consola = console.log;
  
 app.get('/', function (req, res) {
-  res.send({"saludo": "Hola Yirleison"});
+  res.send({saludo: "Hola Yirleison"});
 })
  
 app.listen(process.env.PORT, ()=>{
