@@ -19,7 +19,7 @@ let urlDB;
      urlDB = 'mongodb://localhost:27017/cafe';
  }
  else {
-    urlDB = 'mongodb://cafe:yp2264009*@ds155727.mlab.com:55727/cafe-node';
+    urlDB = process.env.MONGO_URI;
  }
 
 process.env.URLDB = urlDB;
