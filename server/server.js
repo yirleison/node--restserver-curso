@@ -13,8 +13,9 @@ app.use(bodyParser.json())
  
 
 let consola = console.log;
- 
-app.use( require('./routes/user') );
+ // importamos las rutas
+
+ app.use( require('./routes/index') );
 
 mongoose.connect(process.env.URLDB, (err, res) => {
   if (err) {
