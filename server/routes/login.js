@@ -26,7 +26,7 @@ app.post('/login', (req, res) => {
 
         let token = jwt.sign({
             usuario: userDB
-        }, 'hola-muno',
+        }, process.env.SECRET_KEY,
             { expiresIn: process.env.CADUCIDAD_TOKEN });
         res.json({ ok: true, user: userDB, token: token });
     });

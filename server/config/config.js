@@ -12,9 +12,15 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 //====================================
 //Vencimient token
 //===================================
+/***********************************
+ *60 segundos                      *
+ *60 minutos                       *
+ *34 horas                         *
+ *64 dias                          *
+ ***********************************/
 process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
 
-//====================================
+//===================================
 //Secret key
 //===================================
 process.env.SECRET_KEY = process.env.SECRET_KEY || 'hola-mundo';
