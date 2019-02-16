@@ -20,7 +20,6 @@ app.post('/login', (req, res) => {
         }
 
         if (!bcrypt.compareSync(body.password, userDB.password)) {
-            console.log("entro");
             return res.status(400).send({ message: 'Usuario o contraseña invalidos' });
         }
 
