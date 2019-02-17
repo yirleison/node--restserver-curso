@@ -34,10 +34,12 @@ const jwt = require('jsonwebtoken');
 
 let verify_user_admin = (req, res, next) => {
     let user = req.usuario;
-    if(user.role !== 'ADMIN_ROLE') {
+    if(user.role === 'ADMIN_ROLE') {
+        next(); 
+    }
+    else {
         return res.status(401).send({ message: 'Solo el usuario admin esta autorizado para ejecutar esta acción' });
     }
-    next();
  };
 
  module.exports = {
