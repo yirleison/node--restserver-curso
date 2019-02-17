@@ -24,7 +24,6 @@ saveUser = (req, res) => {
         res.send({ ok: true, usuario: userDB });
     });
 
-    consola(params);
 }
 
 updateUser = (req, res) => {

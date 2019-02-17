@@ -38,7 +38,8 @@ let userSquema = new Schema({
     },
     google : {
         type : Boolean,
-        default : false
+        default : false,
+        required : false
     }
 });
 

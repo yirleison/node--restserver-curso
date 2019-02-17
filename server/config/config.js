@@ -25,7 +25,7 @@ process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
 //===================================
 process.env.SECRET_KEY = process.env.SECRET_KEY || 'hola-mundo';
 
-//====================================
+//===================================
 //Base de datos
 //===================================
 
@@ -39,3 +39,9 @@ let urlDB;
  }
 
 process.env.URLDB = urlDB;
+
+//===================================
+//Google Client ID
+//===================================
+
+process.env.CLIENT_ID = process.env.CLIENT_ID || '612279871318-eph8o4n4j6lobklqsco1uoqjgo5ojv2n.apps.googleusercontent.com';

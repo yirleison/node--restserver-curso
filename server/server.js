@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 const mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+const path = require('path');
 
 
 // parse application/x-www-form-urlencoded
@@ -11,8 +12,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
  
-
 let consola = console.log;
+
+//Habilitar la carpeta public
+app.use(express.static(path.resolve( __dirname, '../public')));
  // importamos las rutas
 
  app.use( require('./routes/index') );
