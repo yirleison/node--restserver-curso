@@ -1,4 +1,5 @@
 let Producto = require('../models/producto.model');
+let oploadFile = require('../servicies/upload.service');
 const _ = require('underscore');
 let producto = new Producto;
 let consola = console.log;
@@ -127,10 +128,16 @@ updateStatus = (req, res) => {
     })
 }
 
+upload = function (req, res) {
+    console.log(req.files);
+    oploadFile.uploapFile(req, res);
+}
+
 module.exports = {
     productSave,
     getProducts,
     getProduct,
     productUpdate,
-    updateStatus
+    updateStatus,
+    upload
 }
