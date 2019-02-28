@@ -12,7 +12,7 @@ app.get('/productos',[verifiToken], productoController.getProducts);
 app.get('/producto/:id',[verifiToken], productoController.getProduct);
 app.put('/producto/:id',[verifiToken], productoController.productUpdate);
 app.put('/estado-producto/:id',[verifiToken], productoController.updateStatus);
-app.put('/producto/upload/:tipo/:id',uploadService.uploapFile);
+
 
 
 module.exports = app;

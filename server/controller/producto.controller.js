@@ -128,16 +128,10 @@ updateStatus = (req, res) => {
     })
 }
 
-upload = function (req, res) {
-    console.log(req.files);
-    oploadFile.uploapFile(req, res);
-}
-
 module.exports = {
     productSave,
     getProducts,
     getProduct,
     productUpdate,
-    updateStatus,
-    upload
+    updateStatus
 }
